@@ -1,0 +1,14 @@
+iid noise (normal)...
+iid noise (student-t4 fat tails)...
+full pipeline on 6 no-edge markets...
+iid_normal
+   planted_sharpe=0 {'mean_pbo': 0.503, 'sd_pbo': 0.136, 'naive_best_looks_significant': 1.0, 'corrected_gate_passes_anything': 0.0, 'planted_detected': None, 'mean_false_dsr_hits_per_run': 0.0}
+   planted_sharpe=1 {'mean_pbo': 0.426, 'sd_pbo': 0.163, 'naive_best_looks_significant': 1.0, 'corrected_gate_passes_anything': 0.017, 'planted_detected': 0.017, 'mean_false_dsr_hits_per_run': 0.0}
+   planted_sharpe=2 {'mean_pbo': 0.142, 'sd_pbo': 0.132, 'naive_best_looks_significant': 1.0, 'corrected_gate_passes_anything': 0.617, 'planted_detected': 0.617, 'mean_false_dsr_hits_per_run': 0.0}
+   planted_sharpe=3 {'mean_pbo': 0.007, 'sd_pbo': 0.015, 'naive_best_looks_significant': 1.0, 'corrected_gate_passes_anything': 1.0, 'planted_detected': 1.0, 'mean_false_dsr_hits_per_run': 0.0}
+iid_t4
+   planted_sharpe=0 {'mean_pbo': 0.539, 'sd_pbo': 0.14, 'naive_best_looks_significant': 1.0, 'corrected_gate_passes_anything': 0.0, 'planted_detected': None, 'mean_false_dsr_hits_per_run': 0.0}
+   planted_sharpe=1 {'mean_pbo': 0.406, 'sd_pbo': 0.167, 'naive_best_looks_significant': 1.0, 'corrected_gate_passes_anything': 0.05, 'planted_detected': 0.05, 'mean_false_dsr_hits_per_run': 0.0}
+   planted_sharpe=2 {'mean_pbo': 0.138, 'sd_pbo': 0.134, 'naive_best_looks_significant': 1.0, 'corrected_gate_passes_anything': 0.65, 'planted_detected': 0.65, 'mean_false_dsr_hits_per_run': 0.0}
+   planted_sharpe=3 {'mean_pbo': 0.017, 'sd_pbo': 0.038, 'naive_best_looks_significant': 1.0, 'corrected_gate_passes_anything': 0.967, 'planted_detected': 0.967, 'mean_false_dsr_hits_per_run': 0.0}
+pipeline: {'naive_any_significant_rate': 0.16666666666666666, 'final_gate_false_positive_rate': 0.0, 'mean_pbo': 0.5442631442631443}

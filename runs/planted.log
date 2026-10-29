@@ -1,0 +1,16 @@
+[data] 2500 dates x 100 symbols (delisted incl.), 94 rejection-log rows
+[OK]   feature:momentum: causal at 3 cut points
+[OK]   feature:zscore: causal at 3 cut points
+[OK]   feature:hurst: causal at 3 cut points
+[OK]   feature:volume_imbalance: causal at 3 cut points
+[OK]   feature:vwap_deviation: causal at 3 cut points
+[OK]   strategy:mom_L60_s5_h5_q0.2: causal at 3 cut points
+[OK]   strategy:mr_L10_ze1.5_zx0.0_Hnone: causal at 3 cut points
+[OK]   strategy:pairs_F126_h21_k5_ze2.0_zx0.0_p0.05: causal at 3 cut points
+[screen] 104 candidates in 14.4s (weights 14.0s, vectorised PnL accounting 0.34s)
+[gate] N=104 trials | PBO=0.000 (gate <= 0.4) | best raw Sharpe=2.40 ann | SR0 (expected max from luck) sampling-null=0.90, cross-section-null=2.98 ann
+[gate] significant: naive(uncorrected 5%)=28, BH-FDR=25, DSR(sampling)=18, DSR(cross-section)=0, Romano-Wolf FWER=23 | SURVIVORS (DSR & RW & PBO)=18
+[oos] walk-forward selection OOS Sharpe=1.6509108917585233, purged-CV selection OOS Sharpe=2.28
+
+Timing: {'data_build_s': 0.29, 'leakage_audit_s': 10.606, 'screen_total_s': 14.373, 'screen_weight_generation_s': 13.969, 'screen_pnl_accounting_s': 0.343, 'accounting_vectorised_per_candidate_s': 0.004, 'accounting_loop_per_candidate_s': 0.113, 'accounting_speedup_x': 31.83, 'accounting_equivalence_max_abs_diff': 0.0, 'event_sim_per_run_s': 0.059, 'event_sim_runs': 50, 'event_vs_vectorised_accounting_x': 16.56}
+Wrote runs/planted/summary.json, candidates.csv, rejection_log.csv, tearsheet_*.html

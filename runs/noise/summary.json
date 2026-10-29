@@ -1,0 +1,1389 @@
+{
+  "config": {
+    "n_candidates": 104,
+    "research_rows": 2000,
+    "holdout_rows": 500,
+    "periods_per_year": 252,
+    "cost_one_way_bps": 15.0,
+    "dsr_alpha": 0.05,
+    "pbo_max": 0.4,
+    "n_slices": 16,
+    "data": "synthetic(seed=33)"
+  },
+  "data_quality": {
+    "rejection_log_rows": 93,
+    "by_rule": {
+      "bad_tick_spike_revert": 65,
+      "nonpositive_or_null_price": 15,
+      "ohlc_inconsistent": 8,
+      "suspect_unadjusted_action": 5
+    }
+  },
+  "leakage_audit": [
+    "[OK]   feature:momentum: causal at 3 cut points",
+    "[OK]   feature:zscore: causal at 3 cut points",
+    "[OK]   feature:hurst: causal at 3 cut points",
+    "[OK]   feature:volume_imbalance: causal at 3 cut points",
+    "[OK]   feature:vwap_deviation: causal at 3 cut points",
+    "[OK]   strategy:mom_L60_s5_h5_q0.2: causal at 3 cut points",
+    "[OK]   strategy:mr_L10_ze1.5_zx0.0_Hnone: causal at 3 cut points",
+    "[OK]   strategy:pairs_F126_h21_k5_ze2.0_zx0.0_p0.05: causal at 3 cut points"
+  ],
+  "gate": {
+    "pbo": 0.6234654234654234,
+    "pbo_prob_oos_loss": 0.6752913752913753,
+    "pbo_degradation_slope": -0.7312298543623728,
+    "sr0_annualised": 0.9033881405162061,
+    "sr0_cross_section_annualised": 0.8604679377546621,
+    "sr_var_per_period_sampling": 0.0005002501250625312,
+    "sr_var_per_period_cross_section": 0.0004538452778622721,
+    "n_dsr_cross_section_significant": 0,
+    "n_romano_wolf_significant": 0,
+    "best_raw_sharpe_annualised": 0.5660223200994519,
+    "n_naive_significant": 0,
+    "n_dsr_significant": 0,
+    "n_bh_fdr_significant": 0,
+    "n_survivors": 0
+  },
+  "oos_selection": {
+    "walk_forward_sharpe": -0.7358405107614091,
+    "purged_cv_sharpe": 0.5660223200994515,
+    "walk_forward_windows": 24,
+    "purged_cv_folds": 5
+  },
+  "families": {
+    "mean_reversion": {
+      "n": 48,
+      "median_research_sharpe": 0.14501397250868803,
+      "best_research_sharpe": 0.5660223200994519,
+      "survivors": 0
+    },
+    "momentum": {
+      "n": 24,
+      "median_research_sharpe": -0.11913170497093575,
+      "best_research_sharpe": 0.24301987553657262,
+      "survivors": 0
+    },
+    "pairs": {
+      "n": 32,
+      "median_research_sharpe": -0.41530686171373143,
+      "best_research_sharpe": 0.13568298266273915,
+      "survivors": 0
+    }
+  },
+  "finalists_are_diagnostic_only": true,
+  "finalists": [
+    {
+      "paper_replay_holdout": {
+        "base (fill next bar VWAP, 1x costs)": {
+          "sharpe": -1.3250519273365493,
+          "total_return": -0.0846178198501486,
+          "fill_ratio": 0.9128637362876382,
+          "cost_fraction_of_capital": 0.025625642244083938,
+          "n_events": 2,
+          "events": [
+            {
+              "date": "2023-10-31",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM005"
+              ]
+            },
+            {
+              "date": "2024-04-18",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM096"
+              ]
+            }
+          ],
+          "halted_bars": 0
+        },
+        "2x costs": {
+          "sharpe": -1.782323648453658,
+          "total_return": -0.11207970247711618,
+          "fill_ratio": 0.9144636845580614,
+          "cost_fraction_of_capital": 0.05041005915665443,
+          "n_events": 2,
+          "events": [
+            {
+              "date": "2023-10-31",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM005"
+              ]
+            },
+            {
+              "date": "2024-04-18",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM096"
+              ]
+            }
+          ],
+          "halted_bars": 0
+        },
+        "3x costs": {
+          "sharpe": -2.234507857755715,
+          "total_return": -0.13864637605389762,
+          "fill_ratio": 0.9160325703067979,
+          "cost_fraction_of_capital": 0.0743851478478606,
+          "n_events": 2,
+          "events": [
+            {
+              "date": "2023-10-31",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM005"
+              ]
+            },
+            {
+              "date": "2024-04-18",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM096"
+              ]
+            }
+          ],
+          "halted_bars": 0
+        },
+        "latency +1 bar": {
+          "sharpe": -1.0909127565373997,
+          "total_return": -0.06879838523976711,
+          "fill_ratio": 0.9114678473407392,
+          "cost_fraction_of_capital": 0.025860083127084113,
+          "n_events": 2,
+          "events": [
+            {
+              "date": "2023-10-31",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM005"
+              ]
+            },
+            {
+              "date": "2024-04-18",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM096"
+              ]
+            }
+          ],
+          "halted_bars": 0
+        },
+        "latency +2 bars": {
+          "sharpe": -1.0337070536092616,
+          "total_return": -0.06545843457371969,
+          "fill_ratio": 0.9101989791346098,
+          "cost_fraction_of_capital": 0.025993643194815758,
+          "n_events": 2,
+          "events": [
+            {
+              "date": "2023-10-31",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM005"
+              ]
+            },
+            {
+              "date": "2024-04-18",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM096"
+              ]
+            }
+          ],
+          "halted_bars": 0
+        }
+      },
+      "name": "mr_L60_ze2.0_zx0.0_H0.45",
+      "family": "mean_reversion",
+      "survivor": false,
+      "research_sharpe": 0.5660223200994519,
+      "dsr": 0.168926281100869,
+      "p_naive": 0.053917221181513764,
+      "dsr_cross_section": 0.2014408756843063,
+      "rw_adjusted_p": 0.7152847152847153,
+      "q_bh": 0.9968691213816805,
+      "avg_daily_turnover": 0.022452765513377004,
+      "avg_gross": 0.2472483434653341,
+      "holdout_sharpe": -0.9825838921344053,
+      "cost_stress": {
+        "1x": {
+          "research_sharpe": 0.5660223200994515,
+          "holdout_sharpe": -0.9825838921344053,
+          "research_ann_return": 0.01631085962125618
+        },
+        "2x": {
+          "research_sharpe": 0.23005738307376536,
+          "holdout_sharpe": -1.2628367440996182,
+          "research_ann_return": 0.00662473712201921
+        },
+        "3x": {
+          "research_sharpe": -0.10634886785146283,
+          "holdout_sharpe": -1.5427075904062633,
+          "research_ann_return": -0.0030613853772177625
+        }
+      },
+      "regimes_research": {
+        "vol=low": {
+          "n": 791,
+          "sharpe": 0.8762984909325028,
+          "mean_daily": 7.546976476445241e-05
+        },
+        "vol=high": {
+          "n": 1082,
+          "sharpe": 0.4745192036191747,
+          "mean_daily": 6.497705442092569e-05
+        },
+        "trend=down": {
+          "n": 783,
+          "sharpe": 0.7813684521367821,
+          "mean_daily": 9.888095807926809e-05
+        },
+        "trend=up": {
+          "n": 1090,
+          "sharpe": 0.43162260036338274,
+          "mean_daily": 4.823666663858397e-05
+        }
+      },
+      "risk_research_unscaled": {
+        "n": 2000,
+        "ann_return": 0.01631085962125618,
+        "ann_vol": 0.028816636803987387,
+        "sharpe": 0.5660223200994515,
+        "sortino": 0.8539736900305724,
+        "max_drawdown": -0.05717571537548527,
+        "cvar_5pct_daily": 0.004038927738832251,
+        "calmar": 0.28527600422905497,
+        "skew": 0.5546476799606121,
+        "kurtosis": 9.393518286850226
+      },
+      "risk_research_vol_targeted": {
+        "n": 2000,
+        "ann_return": 0.04146282037577101,
+        "ann_vol": 0.08036216932735273,
+        "sharpe": 0.5159494911949619,
+        "sortino": 0.767423538068764,
+        "max_drawdown": -0.15402168337453448,
+        "cvar_5pct_daily": 0.011343419955334737,
+        "calmar": 0.2692011895165818,
+        "skew": 0.35290377658575045,
+        "kurtosis": 8.35134351494772
+      },
+      "risk_holdout_vol_targeted": {
+        "n": 500,
+        "ann_return": -0.1272280418457085,
+        "ann_vol": 0.08568423850688536,
+        "sharpe": -1.484847669335181,
+        "sortino": -1.8823337683418515,
+        "max_drawdown": -0.2929884571380311,
+        "cvar_5pct_daily": 0.014357337033591289,
+        "calmar": -0.4342425059625114,
+        "skew": -0.6167705134108256,
+        "kurtosis": 7.927081463249189
+      },
+      "mean_leverage_voltarget": 2.8233727727282703
+    },
+    {
+      "paper_replay_holdout": {
+        "base (fill next bar VWAP, 1x costs)": {
+          "sharpe": -1.3450665814903207,
+          "total_return": -0.1750972582204936,
+          "fill_ratio": 0.9150639916971953,
+          "cost_fraction_of_capital": 0.03739404457035145,
+          "n_events": 6,
+          "events": [
+            {
+              "date": "2023-10-31",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM005",
+                "SYM084"
+              ]
+            },
+            {
+              "date": "2023-11-14",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM044"
+              ]
+            },
+            {
+              "date": "2024-02-08",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM066"
+              ]
+            },
+            {
+              "date": "2024-04-18",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM096"
+              ]
+            },
+            {
+              "date": "2024-12-13",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM074"
+              ]
+            },
+            {
+              "date": "2024-12-27",
+              "control": "drawdown_halt",
+              "detail": "drawdown -20.1%; flatten + stand down 20 bars"
+            }
+          ],
+          "halted_bars": 20
+        },
+        "2x costs": {
+          "sharpe": -1.8440633768355192,
+          "total_return": -0.2278597631131084,
+          "fill_ratio": 0.9180831152426759,
+          "cost_fraction_of_capital": 0.0738467020709033,
+          "n_events": 7,
+          "events": [
+            {
+              "date": "2023-10-31",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM005",
+                "SYM084"
+              ]
+            },
+            {
+              "date": "2023-11-14",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM044"
+              ]
+            },
+            {
+              "date": "2024-02-08",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM066"
+              ]
+            },
+            {
+              "date": "2024-04-18",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM096"
+              ]
+            },
+            {
+              "date": "2024-08-05",
+              "control": "drawdown_halt",
+              "detail": "drawdown -20.0%; flatten + stand down 20 bars"
+            },
+            {
+              "date": "2024-12-13",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM074"
+              ]
+            },
+            {
+              "date": "2025-01-13",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM000"
+              ]
+            }
+          ],
+          "halted_bars": 20
+        },
+        "3x costs": {
+          "sharpe": -2.3034475195563533,
+          "total_return": -0.2765629924833657,
+          "fill_ratio": 0.9209772960754676,
+          "cost_fraction_of_capital": 0.10573069795822589,
+          "n_events": 7,
+          "events": [
+            {
+              "date": "2023-10-31",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM005",
+                "SYM084"
+              ]
+            },
+            {
+              "date": "2023-11-14",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM044"
+              ]
+            },
+            {
+              "date": "2024-02-08",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM066"
+              ]
+            },
+            {
+              "date": "2024-04-18",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM096"
+              ]
+            },
+            {
+              "date": "2024-05-14",
+              "control": "drawdown_halt",
+              "detail": "drawdown -20.6%; flatten + stand down 20 bars"
+            },
+            {
+              "date": "2024-12-13",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM074"
+              ]
+            },
+            {
+              "date": "2025-01-13",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM000"
+              ]
+            }
+          ],
+          "halted_bars": 20
+        },
+        "latency +1 bar": {
+          "sharpe": -1.3053456059078972,
+          "total_return": -0.16798012113131489,
+          "fill_ratio": 0.9124050760479715,
+          "cost_fraction_of_capital": 0.03721371171123121,
+          "n_events": 7,
+          "events": [
+            {
+              "date": "2023-10-31",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM005",
+                "SYM084"
+              ]
+            },
+            {
+              "date": "2023-11-14",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM044"
+              ]
+            },
+            {
+              "date": "2024-02-08",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM066"
+              ]
+            },
+            {
+              "date": "2024-04-18",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM096"
+              ]
+            },
+            {
+              "date": "2024-12-13",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM074"
+              ]
+            },
+            {
+              "date": "2025-01-13",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM000"
+              ]
+            },
+            {
+              "date": "2025-02-03",
+              "control": "drawdown_halt",
+              "detail": "drawdown -20.1%; flatten + stand down 20 bars"
+            }
+          ],
+          "halted_bars": 20
+        },
+        "latency +2 bars": {
+          "sharpe": -1.3602938085100649,
+          "total_return": -0.16627145519273967,
+          "fill_ratio": 0.9107182351189583,
+          "cost_fraction_of_capital": 0.037913010841766466,
+          "n_events": 7,
+          "events": [
+            {
+              "date": "2023-10-31",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM005",
+                "SYM084"
+              ]
+            },
+            {
+              "date": "2023-11-14",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM044"
+              ]
+            },
+            {
+              "date": "2024-02-08",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM066"
+              ]
+            },
+            {
+              "date": "2024-04-18",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM096"
+              ]
+            },
+            {
+              "date": "2024-12-13",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM074"
+              ]
+            },
+            {
+              "date": "2025-01-13",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM000"
+              ]
+            },
+            {
+              "date": "2025-04-22",
+              "control": "drawdown_halt",
+              "detail": "drawdown -20.4%; flatten + stand down 20 bars"
+            }
+          ],
+          "halted_bars": 20
+        }
+      },
+      "name": "mr_L60_ze2.0_zx0.0_Hnone",
+      "family": "mean_reversion",
+      "survivor": false,
+      "research_sharpe": 0.4657286504994525,
+      "dsr": 0.1088460379570253,
+      "p_naive": 0.09480285714928283,
+      "dsr_cross_section": 0.1331117404537316,
+      "rw_adjusted_p": 0.8661338661338661,
+      "q_bh": 0.9968691213816805,
+      "avg_daily_turnover": 0.031648736365631924,
+      "avg_gross": 0.5487020740262667,
+      "holdout_sharpe": -1.159299423918371,
+      "cost_stress": {
+        "1x": {
+          "research_sharpe": 0.46572865049945295,
+          "holdout_sharpe": -1.159299423918371,
+          "research_ann_return": 0.02566878803246209
+        },
+        "2x": {
+          "research_sharpe": 0.20013465674558858,
+          "holdout_sharpe": -1.3729630902013523,
+          "research_ann_return": 0.011026725279034002
+        },
+        "3x": {
+          "research_sharpe": -0.06563187542111158,
+          "holdout_sharpe": -1.586688440865094,
+          "research_ann_return": -0.0036153374743940828
+        }
+      },
+      "regimes_research": {
+        "vol=low": {
+          "n": 791,
+          "sharpe": 1.1066314993455189,
+          "mean_daily": 0.00017111757517570308
+        },
+        "vol=high": {
+          "n": 1082,
+          "sharpe": 0.2769183208277572,
+          "mean_daily": 7.247780591219992e-05
+        },
+        "trend=down": {
+          "n": 783,
+          "sharpe": 0.49494173233368194,
+          "mean_daily": 0.00011439985251248709
+        },
+        "trend=up": {
+          "n": 1090,
+          "sharpe": 0.5256050729460648,
+          "mean_daily": 0.00011394486554468262
+        }
+      },
+      "risk_research_unscaled": {
+        "n": 2000,
+        "ann_return": 0.02566878803246209,
+        "ann_vol": 0.05511532950557063,
+        "sharpe": 0.46572865049945295,
+        "sortino": 0.6811212189379039,
+        "max_drawdown": -0.10994213650958884,
+        "cvar_5pct_daily": 0.0077963282852405716,
+        "calmar": 0.2334754339636044,
+        "skew": 0.06889306112867112,
+        "kurtosis": 10.161841279929094
+      },
+      "risk_research_vol_targeted": {
+        "n": 2000,
+        "ann_return": 0.04413622563475125,
+        "ann_vol": 0.10743108723356738,
+        "sharpe": 0.4108329048070983,
+        "sortino": 0.6007816463907966,
+        "max_drawdown": -0.17332661777513603,
+        "cvar_5pct_daily": 0.015408358315861261,
+        "calmar": 0.2546419367163274,
+        "skew": 0.14667289145765258,
+        "kurtosis": 6.242114934993329
+      },
+      "risk_holdout_vol_targeted": {
+        "n": 500,
+        "ann_return": -0.18340290604176712,
+        "ann_vol": 0.11253348286558956,
+        "sharpe": -1.629762994724195,
+        "sortino": -2.022252036123448,
+        "max_drawdown": -0.3682455357316655,
+        "cvar_5pct_daily": 0.01836770635641992,
+        "calmar": -0.4980451580420782,
+        "skew": -0.6567774467674462,
+        "kurtosis": 5.67900656787671
+      },
+      "mean_leverage_voltarget": 2.062822124965089
+    },
+    {
+      "paper_replay_holdout": {
+        "base (fill next bar VWAP, 1x costs)": {
+          "sharpe": -0.8030740480812554,
+          "total_return": -0.08509139780412922,
+          "fill_ratio": 0.9154774299419394,
+          "cost_fraction_of_capital": 0.025130854671796463,
+          "n_events": 5,
+          "events": [
+            {
+              "date": "2023-10-31",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM084"
+              ]
+            },
+            {
+              "date": "2023-11-14",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM044"
+              ]
+            },
+            {
+              "date": "2024-02-08",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM066"
+              ]
+            },
+            {
+              "date": "2024-04-18",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM096"
+              ]
+            },
+            {
+              "date": "2025-01-13",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM000"
+              ]
+            }
+          ],
+          "halted_bars": 0
+        },
+        "2x costs": {
+          "sharpe": -1.1077824265947818,
+          "total_return": -0.11440916034726312,
+          "fill_ratio": 0.9171933334224874,
+          "cost_fraction_of_capital": 0.04937309773379938,
+          "n_events": 5,
+          "events": [
+            {
+              "date": "2023-10-31",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM084"
+              ]
+            },
+            {
+              "date": "2023-11-14",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM044"
+              ]
+            },
+            {
+              "date": "2024-02-08",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM066"
+              ]
+            },
+            {
+              "date": "2024-04-18",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM096"
+              ]
+            },
+            {
+              "date": "2025-01-13",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM000"
+              ]
+            }
+          ],
+          "halted_bars": 0
+        },
+        "3x costs": {
+          "sharpe": -1.908498165629134,
+          "total_return": -0.1807182873642489,
+          "fill_ratio": 0.9203993456058842,
+          "cost_fraction_of_capital": 0.07300516995752959,
+          "n_events": 6,
+          "events": [
+            {
+              "date": "2023-10-31",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM084"
+              ]
+            },
+            {
+              "date": "2023-11-14",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM044"
+              ]
+            },
+            {
+              "date": "2024-02-08",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM066"
+              ]
+            },
+            {
+              "date": "2024-04-18",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM096"
+              ]
+            },
+            {
+              "date": "2025-01-13",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM000"
+              ]
+            },
+            {
+              "date": "2025-05-09",
+              "control": "drawdown_halt",
+              "detail": "drawdown -20.2%; flatten + stand down 20 bars"
+            }
+          ],
+          "halted_bars": 20
+        },
+        "latency +1 bar": {
+          "sharpe": -0.6457941116751091,
+          "total_return": -0.06922385538576081,
+          "fill_ratio": 0.9148771171569086,
+          "cost_fraction_of_capital": 0.025349480243612617,
+          "n_events": 5,
+          "events": [
+            {
+              "date": "2023-10-31",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM084"
+              ]
+            },
+            {
+              "date": "2023-11-14",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM044"
+              ]
+            },
+            {
+              "date": "2024-02-08",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM066"
+              ]
+            },
+            {
+              "date": "2024-04-18",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM096"
+              ]
+            },
+            {
+              "date": "2025-01-13",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM000"
+              ]
+            }
+          ],
+          "halted_bars": 0
+        },
+        "latency +2 bars": {
+          "sharpe": -0.629648145961289,
+          "total_return": -0.06786734567449049,
+          "fill_ratio": 0.9150348946062307,
+          "cost_fraction_of_capital": 0.02558397947478965,
+          "n_events": 5,
+          "events": [
+            {
+              "date": "2023-10-31",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM084"
+              ]
+            },
+            {
+              "date": "2023-11-14",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM044"
+              ]
+            },
+            {
+              "date": "2024-02-08",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM066"
+              ]
+            },
+            {
+              "date": "2024-04-18",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM096"
+              ]
+            },
+            {
+              "date": "2025-01-13",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM000"
+              ]
+            }
+          ],
+          "halted_bars": 0
+        }
+      },
+      "name": "mr_L60_ze2.5_zx0.0_Hnone",
+      "family": "mean_reversion",
+      "survivor": false,
+      "research_sharpe": 0.41348557470279146,
+      "dsr": 0.08324627589687122,
+      "p_naive": 0.12145410459289419,
+      "dsr_cross_section": 0.10341165862021129,
+      "rw_adjusted_p": 0.916083916083916,
+      "q_bh": 0.9968691213816805,
+      "avg_daily_turnover": 0.019950826152179805,
+      "avg_gross": 0.37498233142951315,
+      "holdout_sharpe": -0.6914078996178206,
+      "cost_stress": {
+        "1x": {
+          "research_sharpe": 0.4134855747027911,
+          "holdout_sharpe": -0.6914078996178206,
+          "research_ann_return": 0.018240545402157707
+        },
+        "2x": {
+          "research_sharpe": 0.20196121910052608,
+          "holdout_sharpe": -0.8726482096777374,
+          "research_ann_return": 0.00890709501369635
+        },
+        "3x": {
+          "research_sharpe": -0.009668465318902635,
+          "holdout_sharpe": -1.054061915487669,
+          "research_ann_return": -0.00042635537476501346
+        }
+      },
+      "regimes_research": {
+        "vol=low": {
+          "n": 791,
+          "sharpe": 1.2176093484127206,
+          "mean_daily": 0.000145394187941167
+        },
+        "vol=high": {
+          "n": 1082,
+          "sharpe": 0.08309122389047843,
+          "mean_daily": 1.7596119329397467e-05
+        },
+        "trend=down": {
+          "n": 783,
+          "sharpe": 0.47824962966382606,
+          "mean_daily": 8.767944981760844e-05
+        },
+        "trend=up": {
+          "n": 1090,
+          "sharpe": 0.3421208141766435,
+          "mean_daily": 5.999338951255388e-05
+        }
+      },
+      "risk_research_unscaled": {
+        "n": 2000,
+        "ann_return": 0.018240545402157707,
+        "ann_vol": 0.04411410341284291,
+        "sharpe": 0.4134855747027911,
+        "sortino": 0.6090491479724851,
+        "max_drawdown": -0.10792462184185037,
+        "cvar_5pct_daily": 0.00644277177221715,
+        "calmar": 0.16901190007306097,
+        "skew": 0.26360432717567955,
+        "kurtosis": 9.45302187701549
+      },
+      "risk_research_vol_targeted": {
+        "n": 2000,
+        "ann_return": 0.02854470868096055,
+        "ann_vol": 0.09916955605036236,
+        "sharpe": 0.2878374152090021,
+        "sortino": 0.4160675544779336,
+        "max_drawdown": -0.24511979972383258,
+        "cvar_5pct_daily": 0.014882167843625988,
+        "calmar": 0.11645207246873088,
+        "skew": 0.15365210602791662,
+        "kurtosis": 7.1476186785487785
+      },
+      "risk_holdout_vol_targeted": {
+        "n": 500,
+        "ann_return": -0.1335139176535795,
+        "ann_vol": 0.10935858989174867,
+        "sharpe": -1.2208818510346704,
+        "sortino": -1.5730197065448026,
+        "max_drawdown": -0.31571734226314574,
+        "cvar_5pct_daily": 0.017364691519483496,
+        "calmar": -0.42289066763490496,
+        "skew": -0.44122400077383617,
+        "kurtosis": 6.22447065097559
+      },
+      "mean_leverage_voltarget": 2.432044649916976
+    },
+    {
+      "paper_replay_holdout": {
+        "base (fill next bar VWAP, 1x costs)": {
+          "sharpe": -0.8480960293155482,
+          "total_return": -0.06330776710816477,
+          "fill_ratio": 0.9072780724578411,
+          "cost_fraction_of_capital": 0.03777132187682561,
+          "n_events": 2,
+          "events": [
+            {
+              "date": "2023-10-31",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM005"
+              ]
+            },
+            {
+              "date": "2024-04-18",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM096"
+              ]
+            }
+          ],
+          "halted_bars": 0
+        },
+        "2x costs": {
+          "sharpe": -1.4267966138599277,
+          "total_return": -0.10362466341210608,
+          "fill_ratio": 0.9101443275284441,
+          "cost_fraction_of_capital": 0.07375983347759388,
+          "n_events": 2,
+          "events": [
+            {
+              "date": "2023-10-31",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM005"
+              ]
+            },
+            {
+              "date": "2024-04-18",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM096"
+              ]
+            }
+          ],
+          "halted_bars": 0
+        },
+        "3x costs": {
+          "sharpe": -1.9983171349669788,
+          "total_return": -0.14207092300233248,
+          "fill_ratio": 0.912887040274272,
+          "cost_fraction_of_capital": 0.10804689093616646,
+          "n_events": 2,
+          "events": [
+            {
+              "date": "2023-10-31",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM005"
+              ]
+            },
+            {
+              "date": "2024-04-18",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM096"
+              ]
+            }
+          ],
+          "halted_bars": 0
+        },
+        "latency +1 bar": {
+          "sharpe": -0.5870283562825698,
+          "total_return": -0.043976627376401844,
+          "fill_ratio": 0.905658594415384,
+          "cost_fraction_of_capital": 0.0381108783205769,
+          "n_events": 2,
+          "events": [
+            {
+              "date": "2023-10-31",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM005"
+              ]
+            },
+            {
+              "date": "2024-04-18",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM096"
+              ]
+            }
+          ],
+          "halted_bars": 0
+        },
+        "latency +2 bars": {
+          "sharpe": -0.6600187428212531,
+          "total_return": -0.04947841463628244,
+          "fill_ratio": 0.9050869441041373,
+          "cost_fraction_of_capital": 0.0381705598098387,
+          "n_events": 2,
+          "events": [
+            {
+              "date": "2023-10-31",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM005"
+              ]
+            },
+            {
+              "date": "2024-04-18",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM096"
+              ]
+            }
+          ],
+          "halted_bars": 0
+        }
+      },
+      "name": "mr_L60_ze1.5_zx0.0_H0.45",
+      "family": "mean_reversion",
+      "survivor": false,
+      "research_sharpe": 0.40734547673464566,
+      "dsr": 0.08005083150183473,
+      "p_naive": 0.1243422358948949,
+      "dsr_cross_section": 0.09971360501813498,
+      "rw_adjusted_p": 0.922077922077922,
+      "q_bh": 0.9968691213816805,
+      "avg_daily_turnover": 0.031407318125672705,
+      "avg_gross": 0.3198729208819258,
+      "holdout_sharpe": -0.5050702953741515,
+      "cost_stress": {
+        "1x": {
+          "research_sharpe": 0.40734547673464533,
+          "holdout_sharpe": -0.5050702953741515,
+          "research_ann_return": 0.013454174329739292
+        },
+        "2x": {
+          "research_sharpe": 0.0007429240468811346,
+          "holdout_sharpe": -0.8693006215640328,
+          "research_ann_return": 2.4514977374266443e-05
+        },
+        "3x": {
+          "research_sharpe": -0.4064427650121892,
+          "holdout_sharpe": -1.2343199886866503,
+          "research_ann_return": -0.013405144374990765
+        }
+      },
+      "regimes_research": {
+        "vol=low": {
+          "n": 791,
+          "sharpe": 0.6407133847356559,
+          "mean_daily": 6.2457112180621e-05
+        },
+        "vol=high": {
+          "n": 1082,
+          "sharpe": 0.3412186029439782,
+          "mean_daily": 5.373959601723727e-05
+        },
+        "trend=down": {
+          "n": 783,
+          "sharpe": 0.9364205817707755,
+          "mean_daily": 0.00013401816682986325
+        },
+        "trend=up": {
+          "n": 1090,
+          "sharpe": 0.018511325775282403,
+          "mean_daily": 2.3977926584761354e-06
+        }
+      },
+      "risk_research_unscaled": {
+        "n": 2000,
+        "ann_return": 0.013454174329739292,
+        "ann_vol": 0.03302890322384423,
+        "sharpe": 0.40734547673464533,
+        "sortino": 0.6063198068661071,
+        "max_drawdown": -0.05976306716117097,
+        "cvar_5pct_daily": 0.004694628211542009,
+        "calmar": 0.22512523149883926,
+        "skew": 0.4696679502182137,
+        "kurtosis": 8.337195744742676
+      },
+      "risk_research_vol_targeted": {
+        "n": 2000,
+        "ann_return": 0.03192546371542465,
+        "ann_vol": 0.08746229693016383,
+        "sharpe": 0.36501972662479054,
+        "sortino": 0.5371021222455864,
+        "max_drawdown": -0.14850899363377235,
+        "cvar_5pct_daily": 0.012338638066009842,
+        "calmar": 0.2149732681789886,
+        "skew": 0.30078485553180706,
+        "kurtosis": 7.798835503345622
+      },
+      "risk_holdout_vol_targeted": {
+        "n": 500,
+        "ann_return": -0.08757943647614946,
+        "ann_vol": 0.09247495953759131,
+        "sharpe": -0.9470610953935935,
+        "sortino": -1.2286478415991722,
+        "max_drawdown": -0.2416442081612783,
+        "cvar_5pct_daily": 0.014876576159136354,
+        "calmar": -0.36243134955544704,
+        "skew": -0.501680040923317,
+        "kurtosis": 6.295148802164892
+      },
+      "mean_leverage_voltarget": 2.7198656451401395
+    },
+    {
+      "paper_replay_holdout": {
+        "base (fill next bar VWAP, 1x costs)": {
+          "sharpe": -0.9734685414126864,
+          "total_return": -0.04923988963575754,
+          "fill_ratio": 0.9168222284895997,
+          "cost_fraction_of_capital": 0.01590473167266577,
+          "n_events": 1,
+          "events": [
+            {
+              "date": "2024-04-18",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM096"
+              ]
+            }
+          ],
+          "halted_bars": 0
+        },
+        "2x costs": {
+          "sharpe": -1.3352186790341491,
+          "total_return": -0.06677777714872624,
+          "fill_ratio": 0.9178236113145065,
+          "cost_fraction_of_capital": 0.03148482870188619,
+          "n_events": 1,
+          "events": [
+            {
+              "date": "2024-04-18",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM096"
+              ]
+            }
+          ],
+          "halted_bars": 0
+        },
+        "3x costs": {
+          "sharpe": -1.6942731966350626,
+          "total_return": -0.08396281260689364,
+          "fill_ratio": 0.9188117353193285,
+          "cost_fraction_of_capital": 0.046748350025976736,
+          "n_events": 1,
+          "events": [
+            {
+              "date": "2024-04-18",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM096"
+              ]
+            }
+          ],
+          "halted_bars": 0
+        },
+        "latency +1 bar": {
+          "sharpe": -0.7321485801155294,
+          "total_return": -0.036586592812053564,
+          "fill_ratio": 0.9174647310074246,
+          "cost_fraction_of_capital": 0.01604381679436224,
+          "n_events": 1,
+          "events": [
+            {
+              "date": "2024-04-18",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM096"
+              ]
+            }
+          ],
+          "halted_bars": 0
+        },
+        "latency +2 bars": {
+          "sharpe": -0.7145341833442895,
+          "total_return": -0.03573047613315761,
+          "fill_ratio": 0.9170102765243906,
+          "cost_fraction_of_capital": 0.016142507106409798,
+          "n_events": 1,
+          "events": [
+            {
+              "date": "2024-04-18",
+              "control": "delisting_liquidation",
+              "detail": [
+                "SYM096"
+              ]
+            }
+          ],
+          "halted_bars": 0
+        }
+      },
+      "name": "mr_L60_ze2.5_zx0.0_H0.45",
+      "family": "mean_reversion",
+      "survivor": false,
+      "research_sharpe": 0.38336214314249445,
+      "dsr": 0.07056983343482265,
+      "p_naive": 0.13899818497813998,
+      "dsr_cross_section": 0.08849108384795407,
+      "rw_adjusted_p": 0.936063936063936,
+      "q_bh": 0.9968691213816805,
+      "avg_daily_turnover": 0.01393694708823088,
+      "avg_gross": 0.16029618949487912,
+      "holdout_sharpe": -0.8092311645155984,
+      "cost_stress": {
+        "1x": {
+          "research_sharpe": 0.3833621431424939,
+          "holdout_sharpe": -0.8092311645155984,
+          "research_ann_return": 0.008595246116464124
+        },
+        "2x": {
+          "research_sharpe": 0.1139771419994147,
+          "holdout_sharpe": -1.0265865700386083,
+          "research_ann_return": 0.0025542821536560624
+        },
+        "3x": {
+          "research_sharpe": -0.15559660468985845,
+          "holdout_sharpe": -1.2435817262691955,
+          "research_ann_return": -0.0034866818091519956
+        }
+      },
+      "regimes_research": {
+        "vol=low": {
+          "n": 791,
+          "sharpe": 0.7094984932712737,
+          "mean_daily": 4.7151977398972056e-05
+        },
+        "vol=high": {
+          "n": 1082,
+          "sharpe": 0.2736820800874083,
+          "mean_daily": 2.9227045525702938e-05
+        },
+        "trend=down": {
+          "n": 783,
+          "sharpe": 0.7369978090279468,
+          "mean_daily": 7.082755858354315e-05
+        },
+        "trend=up": {
+          "n": 1090,
+          "sharpe": 0.13907262838291365,
+          "mean_daily": 1.235128349585613e-05
+        }
+      },
+      "risk_research_unscaled": {
+        "n": 2000,
+        "ann_return": 0.008595246116464124,
+        "ann_vol": 0.02242069612301106,
+        "sharpe": 0.3833621431424939,
+        "sortino": 0.5694032858674656,
+        "max_drawdown": -0.06748235316849094,
+        "cvar_5pct_daily": 0.00325637993662098,
+        "calmar": 0.12737027849345126,
+        "skew": 0.43523253751466306,
+        "kurtosis": 8.742051879581862
+      },
+      "risk_research_vol_targeted": {
+        "n": 2000,
+        "ann_return": 0.025504111623548015,
+        "ann_vol": 0.06656949059076253,
+        "sharpe": 0.38312012600990336,
+        "sortino": 0.5693918999961153,
+        "max_drawdown": -0.18957250896658573,
+        "cvar_5pct_daily": 0.009630216998589328,
+        "calmar": 0.13453486353363292,
+        "skew": 0.4419277843692582,
+        "kurtosis": 8.889995693028784
+      },
+      "risk_holdout_vol_targeted": {
+        "n": 500,
+        "ann_return": -0.08466074976820347,
+        "ann_vol": 0.06871324888562337,
+        "sharpe": -1.2320877143958877,
+        "sortino": -1.5855992461796833,
+        "max_drawdown": -0.2311903680543257,
+        "cvar_5pct_daily": 0.011346614055604215,
+        "calmar": -0.3661949694561223,
+        "skew": -0.8108575446583619,
+        "kurtosis": 12.134422602577985
+      },
+      "mean_leverage_voltarget": 2.9444520634124514
+    }
+  ],
+  "timing": {
+    "data_build_s": 0.25951570999995965,
+    "leakage_audit_s": 10.22146676500006,
+    "screen_total_s": 13.615440261999993,
+    "screen_weight_generation_s": 13.212287943001684,
+    "screen_pnl_accounting_s": 0.34332110899958934,
+    "accounting_vectorised_per_candidate_s": 0.0035375469999507914,
+    "accounting_loop_per_candidate_s": 0.11576613300007921,
+    "accounting_speedup_x": 32.724973831213994,
+    "accounting_equivalence_max_abs_diff": 6.938893903907228e-18,
+    "event_sim_per_run_s": 0.06220628699998997,
+    "event_sim_runs": 25,
+    "event_vs_vectorised_accounting_x": 17.58458248070069
+  }
+}

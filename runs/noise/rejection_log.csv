@@ -1,0 +1,94 @@
+symbol,date,rule,action,detail
+SYM003,2022-01-18,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM004,2020-01-27,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM006,2025-02-24,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM007,2024-09-11,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM008,2020-10-05,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM013,2017-10-12,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM015,2022-01-13,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM015,2023-07-12,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM016,2016-01-25,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM016,2017-01-20,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM016,2017-03-13,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM017,2021-08-24,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM017,2025-03-28,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM018,2021-05-19,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM019,2019-04-15,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM020,2018-06-21,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM020,2023-05-30,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM020,2024-11-15,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM025,2021-05-06,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM026,2024-08-08,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM028,2022-12-06,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM031,2019-11-18,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM032,2021-04-13,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM034,2019-10-02,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM036,2017-03-01,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM037,2025-06-17,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM038,2021-10-21,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM039,2018-04-12,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM040,2022-05-09,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM046,2017-11-17,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM046,2024-11-28,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM048,2022-04-14,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM049,2020-04-22,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM049,2022-01-24,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM049,2022-04-13,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM050,2020-04-22,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM050,2022-04-28,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM051,2018-03-22,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM054,2020-04-15,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM054,2023-06-30,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM056,2019-11-25,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM057,2018-10-23,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM064,2017-09-04,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM064,2017-09-07,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM067,2017-03-01,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM067,2023-09-08,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM067,2024-05-14,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM068,2016-06-07,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM068,2024-02-16,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM070,2020-08-06,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM070,2023-01-17,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM071,2023-11-10,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM073,2019-08-21,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM073,2023-01-05,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM076,2017-05-19,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM079,2016-08-17,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM079,2019-03-20,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM080,2021-08-05,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM082,2016-01-21,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM085,2018-09-03,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM085,2019-04-05,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM085,2021-06-22,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM090,2023-03-30,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM097,2018-06-20,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM098,2021-01-14,bad_tick_spike_revert,rejected,>30% one-bar move that reverts within 10%
+SYM008,2019-05-14,nonpositive_or_null_price,rejected,bar removed
+SYM011,2024-06-28,nonpositive_or_null_price,rejected,bar removed
+SYM021,2016-08-03,nonpositive_or_null_price,rejected,bar removed
+SYM021,2024-04-30,nonpositive_or_null_price,rejected,bar removed
+SYM044,2020-11-18,nonpositive_or_null_price,rejected,bar removed
+SYM055,2018-11-02,nonpositive_or_null_price,rejected,bar removed
+SYM057,2021-10-15,nonpositive_or_null_price,rejected,bar removed
+SYM065,2023-08-02,nonpositive_or_null_price,rejected,bar removed
+SYM072,2019-08-14,nonpositive_or_null_price,rejected,bar removed
+SYM079,2017-05-23,nonpositive_or_null_price,rejected,bar removed
+SYM080,2021-09-20,nonpositive_or_null_price,rejected,bar removed
+SYM085,2025-05-08,nonpositive_or_null_price,rejected,bar removed
+SYM086,2023-07-20,nonpositive_or_null_price,rejected,bar removed
+SYM089,2021-06-01,nonpositive_or_null_price,rejected,bar removed
+SYM093,2017-06-07,nonpositive_or_null_price,rejected,bar removed
+SYM014,2019-12-09,ohlc_inconsistent,rejected,bar removed
+SYM026,2018-01-25,ohlc_inconsistent,rejected,bar removed
+SYM044,2018-11-05,ohlc_inconsistent,rejected,bar removed
+SYM055,2020-09-04,ohlc_inconsistent,rejected,bar removed
+SYM059,2017-02-07,ohlc_inconsistent,rejected,bar removed
+SYM064,2017-03-08,ohlc_inconsistent,rejected,bar removed
+SYM081,2022-03-24,ohlc_inconsistent,rejected,bar removed
+SYM089,2020-08-17,ohlc_inconsistent,rejected,bar removed
+SYM002,2020-04-10,suspect_unadjusted_action,quarantine_return,"price ratio matches a split/consolidation, no recorded action within 3d"
+SYM026,2016-10-11,suspect_unadjusted_action,quarantine_return,"price ratio matches a split/consolidation, no recorded action within 3d"
+SYM083,2021-11-24,suspect_unadjusted_action,quarantine_return,"price ratio matches a split/consolidation, no recorded action within 3d"
+SYM083,2021-11-25,suspect_unadjusted_action,quarantine_return,"price ratio matches a split/consolidation, no recorded action within 3d"
+SYM086,2024-07-29,suspect_unadjusted_action,quarantine_return,"price ratio matches a split/consolidation, no recorded action within 3d"
