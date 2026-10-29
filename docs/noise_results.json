@@ -1,0 +1,274 @@
+{
+  "iid_normal": {
+    "n_strategies": 200,
+    "T": 1500,
+    "repeats": 60,
+    "dist": "normal",
+    "alpha": 0.05,
+    "pbo_max": 0.4,
+    "results": {
+      "planted_sharpe=0": {
+        "mean_pbo": 0.5025239575239576,
+        "sd_pbo": 0.13623592225940975,
+        "naive_best_looks_significant": 1.0,
+        "corrected_gate_passes_anything": 0.0,
+        "planted_detected": null,
+        "mean_false_dsr_hits_per_run": 0.0
+      },
+      "planted_sharpe=1": {
+        "mean_pbo": 0.426048951048951,
+        "sd_pbo": 0.16254619019349345,
+        "naive_best_looks_significant": 1.0,
+        "corrected_gate_passes_anything": 0.016666666666666666,
+        "planted_detected": 0.016666666666666666,
+        "mean_false_dsr_hits_per_run": 0.0
+      },
+      "planted_sharpe=2": {
+        "mean_pbo": 0.1421147371147371,
+        "sd_pbo": 0.13160607597743207,
+        "naive_best_looks_significant": 1.0,
+        "corrected_gate_passes_anything": 0.6166666666666667,
+        "planted_detected": 0.6166666666666667,
+        "mean_false_dsr_hits_per_run": 0.0
+      },
+      "planted_sharpe=3": {
+        "mean_pbo": 0.006955451955451956,
+        "sd_pbo": 0.014975061422617937,
+        "naive_best_looks_significant": 1.0,
+        "corrected_gate_passes_anything": 1.0,
+        "planted_detected": 1.0,
+        "mean_false_dsr_hits_per_run": 0.0
+      }
+    }
+  },
+  "iid_t4": {
+    "n_strategies": 200,
+    "T": 1500,
+    "repeats": 60,
+    "dist": "t4",
+    "alpha": 0.05,
+    "pbo_max": 0.4,
+    "results": {
+      "planted_sharpe=0": {
+        "mean_pbo": 0.5385353535353534,
+        "sd_pbo": 0.1399101995543412,
+        "naive_best_looks_significant": 1.0,
+        "corrected_gate_passes_anything": 0.0,
+        "planted_detected": null,
+        "mean_false_dsr_hits_per_run": 0.0
+      },
+      "planted_sharpe=1": {
+        "mean_pbo": 0.40613312613312613,
+        "sd_pbo": 0.1672040047389507,
+        "naive_best_looks_significant": 1.0,
+        "corrected_gate_passes_anything": 0.05,
+        "planted_detected": 0.05,
+        "mean_false_dsr_hits_per_run": 0.0
+      },
+      "planted_sharpe=2": {
+        "mean_pbo": 0.1375628075628076,
+        "sd_pbo": 0.13403255247880788,
+        "naive_best_looks_significant": 1.0,
+        "corrected_gate_passes_anything": 0.65,
+        "planted_detected": 0.65,
+        "mean_false_dsr_hits_per_run": 0.0
+      },
+      "planted_sharpe=3": {
+        "mean_pbo": 0.01732841232841233,
+        "sd_pbo": 0.03781190408398162,
+        "naive_best_looks_significant": 1.0,
+        "corrected_gate_passes_anything": 0.9666666666666667,
+        "planted_detected": 0.9666666666666667,
+        "mean_false_dsr_hits_per_run": 0.0
+      }
+    }
+  },
+  "pipeline_noise_world": {
+    "runs": [
+      {
+        "seed": 0,
+        "pbo": 0.8403263403263403,
+        "best_raw_sharpe": 0.5506724823564229,
+        "sr0": 1.1664635985336673,
+        "naive_significant": 0,
+        "dsr_significant": 0,
+        "survivors": 0
+      },
+      {
+        "seed": 1,
+        "pbo": 0.5808857808857809,
+        "best_raw_sharpe": 0.6026046108290372,
+        "sr0": 1.1664635985336673,
+        "naive_significant": 0,
+        "dsr_significant": 0,
+        "survivors": 0
+      },
+      {
+        "seed": 2,
+        "pbo": 0.5188811188811189,
+        "best_raw_sharpe": 0.3007496033513717,
+        "sr0": 1.1664635985336673,
+        "naive_significant": 0,
+        "dsr_significant": 0,
+        "survivors": 0
+      },
+      {
+        "seed": 3,
+        "pbo": 0.4174048174048174,
+        "best_raw_sharpe": 0.7644663211727325,
+        "sr0": 1.1664635985336673,
+        "naive_significant": 1,
+        "dsr_significant": 0,
+        "survivors": 0
+      },
+      {
+        "seed": 4,
+        "pbo": 0.5721056721056721,
+        "best_raw_sharpe": 0.2301026838866915,
+        "sr0": 1.1664635985336673,
+        "naive_significant": 0,
+        "dsr_significant": 0,
+        "survivors": 0
+      },
+      {
+        "seed": 5,
+        "pbo": 0.33597513597513595,
+        "best_raw_sharpe": 0.6082313617152345,
+        "sr0": 1.1664635985336673,
+        "naive_significant": 0,
+        "dsr_significant": 0,
+        "survivors": 0
+      },
+      {
+        "seed": 6,
+        "pbo": 0.527039627039627,
+        "best_raw_sharpe": 0.8293408289813018,
+        "sr0": 1.1664635985336673,
+        "naive_significant": 4,
+        "dsr_significant": 0,
+        "survivors": 0
+      },
+      {
+        "seed": 7,
+        "pbo": 0.3885003885003885,
+        "best_raw_sharpe": 0.8111999695992503,
+        "sr0": 1.1664635985336673,
+        "naive_significant": 1,
+        "dsr_significant": 0,
+        "survivors": 0
+      },
+      {
+        "seed": 8,
+        "pbo": 0.35337995337995337,
+        "best_raw_sharpe": 0.9381804253799428,
+        "sr0": 1.1664635985336673,
+        "naive_significant": 2,
+        "dsr_significant": 0,
+        "survivors": 0
+      },
+      {
+        "seed": 9,
+        "pbo": 0.2299145299145299,
+        "best_raw_sharpe": 0.7016877875040827,
+        "sr0": 1.1664635985336673,
+        "naive_significant": 0,
+        "dsr_significant": 0,
+        "survivors": 0
+      },
+      {
+        "seed": 10,
+        "pbo": 0.23247863247863249,
+        "best_raw_sharpe": 1.1531702699819244,
+        "sr0": 1.1664635985336673,
+        "naive_significant": 4,
+        "dsr_significant": 0,
+        "survivors": 0
+      },
+      {
+        "seed": 11,
+        "pbo": 0.21724941724941724,
+        "best_raw_sharpe": 1.1713074842298705,
+        "sr0": 1.1664635985336673,
+        "naive_significant": 5,
+        "dsr_significant": 0,
+        "survivors": 0
+      },
+      {
+        "seed": 12,
+        "pbo": 0.7673659673659674,
+        "best_raw_sharpe": 0.48022113722160104,
+        "sr0": 1.1664635985336673,
+        "naive_significant": 0,
+        "dsr_significant": 0,
+        "survivors": 0
+      },
+      {
+        "seed": 13,
+        "pbo": 0.43061383061383063,
+        "best_raw_sharpe": 0.5241998352041586,
+        "sr0": 1.1664635985336673,
+        "naive_significant": 0,
+        "dsr_significant": 0,
+        "survivors": 0
+      },
+      {
+        "seed": 14,
+        "pbo": 0.23084693084693084,
+        "best_raw_sharpe": 1.1006532560958073,
+        "sr0": 1.1664635985336673,
+        "naive_significant": 2,
+        "dsr_significant": 0,
+        "survivors": 0
+      },
+      {
+        "seed": 15,
+        "pbo": 0.40512820512820513,
+        "best_raw_sharpe": 0.5907570620600894,
+        "sr0": 1.1664635985336673,
+        "naive_significant": 0,
+        "dsr_significant": 0,
+        "survivors": 0
+      },
+      {
+        "seed": 16,
+        "pbo": 0.5483294483294483,
+        "best_raw_sharpe": 0.6821825759755412,
+        "sr0": 1.1664635985336673,
+        "naive_significant": 0,
+        "dsr_significant": 0,
+        "survivors": 0
+      },
+      {
+        "seed": 17,
+        "pbo": 0.6856254856254856,
+        "best_raw_sharpe": 0.39557871517073145,
+        "sr0": 1.1664635985336673,
+        "naive_significant": 0,
+        "dsr_significant": 0,
+        "survivors": 0
+      },
+      {
+        "seed": 18,
+        "pbo": 0.2801864801864802,
+        "best_raw_sharpe": 0.7714500521472828,
+        "sr0": 1.1664635985336673,
+        "naive_significant": 1,
+        "dsr_significant": 0,
+        "survivors": 0
+      },
+      {
+        "seed": 19,
+        "pbo": 0.4285159285159285,
+        "best_raw_sharpe": 0.6219511371665166,
+        "sr0": 1.1664635985336673,
+        "naive_significant": 0,
+        "dsr_significant": 0,
+        "survivors": 0
+      }
+    ],
+    "n_worlds": 20,
+    "naive_any_significant_rate": 0.4,
+    "final_gate_false_positive_rate": 0.0,
+    "mean_pbo": 0.4495376845376845
+  }
+}
